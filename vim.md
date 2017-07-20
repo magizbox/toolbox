@@ -43,8 +43,6 @@ inside this window.  The text in the window will look the same for both
 versions, but with gvim you have extra features, like a menu bar.  More about
 that later.
 
-==============================================================================
-
 ##	Inserting text
 
 The Vim editor is a modal editor.  That means that the editor behaves
@@ -81,9 +79,9 @@ To be able to see what mode you are in, type this command:
 
 You will notice that when typing the colon Vim moves the cursor to the last
 line of the window.  That's where you type colon commands (commands that start
-with a colon).  Finish this command by pressing the <Enter> key (all commands
+with a colon).  Finish this command by pressing the `<Enter> key` (all commands
 that start with a colon are finished this way).
-   Now, if you type the "i" command Vim will display --INSERT-- at the bottom
+   Now, if you type the "`i`" command Vim will display --INSERT-- at the bottom
 of the window.  This indicates you are in Insert mode.
 
 	+---------------------------------------+
@@ -94,7 +92,7 @@ of the window.  This indicates you are in Insert mode.
 	|-- INSERT --				|
 	+---------------------------------------+
 
-If you press <Esc> to go back to Normal mode the last line will be made blank.
+If you press `<Esc>` to go back to Normal mode the last line will be made blank.
 
 
 GETTING OUT OF TROUBLE
@@ -118,7 +116,7 @@ After you return to Normal mode, you can move around by using these keys:
 	l   right
 
 At first, it may appear that these commands were chosen at random.  After all,
-who ever heard of using l for right?  But actually, there is a very good
+who ever heard of using `l` for right?  But actually, there is a very good
 reason for these choices: Moving the cursor is the most common thing you do in
 an editor, and these keys are on the home row of your right hand.  In other
 words, these commands are placed where you can type them the fastest
@@ -134,8 +132,8 @@ words, these commands are placed where you can type them the fastest
 	locate them in unusual places; therefore, knowing the use of the hjkl
 	keys helps in those situations.
 
-One way to remember these commands is that h is on the left, l is on the
-right and j points down.  In a picture:
+One way to remember these commands is that `h` is on the left, `l` is on the
+right and `j` points down.  In a picture:
 
 		       k
 		   h     l
