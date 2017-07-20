@@ -1,6 +1,6 @@
 # Toolbox
 
-The Coder’s Toolbox contains all the little tools you never know where to find.
+The Toolbox contains all the little tools you never know where to find.
 
 ## Virtual Machine
 
