@@ -283,3 +283,5 @@ edited.  Typing this command twice cancels the preceding "U".
 The "U" command is a change by itself, which the "u" command undoes and CTRL-R
 redoes.  This might be a bit confusing.  Don't worry, with "u" and CTRL-R you
 can go to any of the situations you had.  More about that in section |32.2|.
+
+Reference: http://vimdoc.sourceforge.net/htmldoc/usr_02.html
