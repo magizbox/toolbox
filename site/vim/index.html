@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Brother Rain">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Vim - Toolbox</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../components/magiz-c-book/src/book.css" rel="stylesheet">
+        <link href="../components/magiz-c-course/src/course.css" rel="stylesheet">
+        <link href="../components/magiz-c-video/src/video.css" rel="stylesheet">
+        <link href="../components/magiz-c-benchmark/src/benchmark.css" rel="stylesheet">
+        <link href="../components/magiz-c-paper/src/paper.css" rel="stylesheet">
+        <link href="../components/magiz-doc/style.css" rel="stylesheet">
+        <link href="../components/magiz-doc/highlight.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-68978617-1', 'magizbox.com');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">Toolbox</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">Vim</a>
+                    </li>
+                    <li >
+                        <a href="../virtual_box/">Virtual Box</a>
+                    </li>
+                    <li >
+                        <a href="../vmware/">VMWare</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../virtual_box/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#vim">Vim</a></li>
+            <li><a href="#running-vim-for-the-first-time">Running Vim for the First Time</a></li>
+            <li><a href="#inserting-text">Inserting text</a></li>
+            <li><a href="#moving-around">Moving around</a></li>
+            <li><a href="#deleting-characters">Deleting characters</a></li>
+            <li><a href="#undo-and-redo">Undo and Redo</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="vim">Vim</h1>
+<h2 id="running-vim-for-the-first-time">Running Vim for the First Time</h2>
+<p>To start Vim, enter this command:</p>
+<pre><code>gvim file.txt
+</code></pre>
+<p>In UNIX you can type this at any command prompt.  If you are running Microsoft
+Windows, open an MS-DOS prompt window and enter the command.
+   In either case, Vim starts editing a file called file.txt.  Because this
+is a new file, you get a blank window. This is what your screen will look
+like:</p>
+<pre><code>+---------------------------------------+
+|#                  |
+|~                  |
+|~                  |
+|~                  |
+|~                  |
+|"file.txt" [New file]          |
++---------------------------------------+
+    ('#" is the cursor position.)
+</code></pre>
+<p>The tilde (~) lines indicate lines not in the file.  In other words, when Vim
+runs out of file to display, it displays tilde lines.  At the bottom of the
+screen, a message line indicates the file is named file.txt and shows that you
+are creating a new file.  The message information is temporary and other
+information overwrites it.</p>
+<p>THE VIM COMMAND</p>
+<p>The gvim command causes the editor to create a new window for editing.  If you
+use this command:</p>
+<pre><code>vim file.txt
+</code></pre>
+<p>the editing occurs inside your command window.  In other words, if you are
+running inside an xterm, the editor uses your xterm window.  If you are using
+an MS-DOS command prompt window under Microsoft Windows, the editing occurs
+inside this window.  The text in the window will look the same for both
+versions, but with gvim you have extra features, like a menu bar.  More about
+that later.</p>
+<h2 id="inserting-text">Inserting text</h2>
+<p>The Vim editor is a modal editor.  That means that the editor behaves
+differently, depending on which mode you are in.  The two basic modes are
+called Normal mode and Insert mode.  In Normal mode the characters you type
+are commands.  In Insert mode the characters are inserted as text.
+   Since you have just started Vim it will be in Normal mode.  To start Insert
+mode you type the "i" command (i for Insert).  Then you can enter
+the text.  It will be inserted into the file.  Do not worry if you make
+mistakes; you can correct them later.  To enter the following programmer's
+limerick, this is what you type:</p>
+<pre><code>iA very intelligent turtle
+Found programming UNIX a hurdle
+</code></pre>
+<p>After typing "turtle" you press the <Enter> key to start a new line.  Finally
+you press the <Esc> key to stop Insert mode and go back to Normal mode.  You
+now have two lines of text in your Vim window:</p>
+<pre><code>+---------------------------------------+
+|A very intelligent turtle      |
+|Found programming UNIX a hurdle    |
+|~                  |
+|~                  |
+|                   |
++---------------------------------------+
+</code></pre>
+<p>WHAT IS THE MODE?</p>
+<p>To be able to see what mode you are in, type this command:</p>
+<pre><code>:set showmode
+</code></pre>
+<p>You will notice that when typing the colon Vim moves the cursor to the last
+line of the window.  That's where you type colon commands (commands that start
+with a colon).  Finish this command by pressing the <code>&lt;Enter&gt; key</code> (all commands
+that start with a colon are finished this way).
+   Now, if you type the "<code>i</code>" command Vim will display --INSERT-- at the bottom
+of the window.  This indicates you are in Insert mode.</p>
+<pre><code>+---------------------------------------+
+|A very intelligent turtle      |
+|Found programming UNIX a hurdle    |
+|~                  |
+|~                  |
+|-- INSERT --               |
++---------------------------------------+
+</code></pre>
+<p>If you press <code>&lt;Esc&gt;</code> to go back to Normal mode the last line will be made blank.</p>
+<p>GETTING OUT OF TROUBLE</p>
+<p>One of the problems for Vim novices is mode confusion, which is caused by
+forgetting which mode you are in or by accidentally typing a command that
+switches modes.  To get back to Normal mode, no matter what mode you are in,
+press the <Esc> key.  Sometimes you have to press it twice.  If Vim beeps back
+at you, you already are in Normal mode.</p>
+<p>==============================================================================</p>
+<h2 id="moving-around">Moving around</h2>
+<p>After you return to Normal mode, you can move around by using these keys:</p>
+<pre><code>h   left                        *hjkl*
+j   down
+k   up
+l   right
+</code></pre>
+<p>At first, it may appear that these commands were chosen at random.  After all,
+who ever heard of using <code>l</code> for right?  But actually, there is a very good
+reason for these choices: Moving the cursor is the most common thing you do in
+an editor, and these keys are on the home row of your right hand.  In other
+words, these commands are placed where you can type them the fastest
+(especially when you type with ten fingers).</p>
+<pre><code>Note:
+You can also move the cursor by using the arrow keys.  If you do,
+however, you greatly slow down your editing because to press the arrow
+keys, you must move your hand from the text keys to the arrow keys.
+Considering that you might be doing it hundreds of times an hour, this
+can take a significant amount of time.
+   Also, there are keyboards which do not have arrow keys, or which
+locate them in unusual places; therefore, knowing the use of the hjkl
+keys helps in those situations.
+</code></pre>
+<p>One way to remember these commands is that <code>h</code> is on the left, <code>l</code> is on the
+right and <code>j</code> points down.  In a picture:</p>
+<pre><code>           k
+       h     l
+         j
+</code></pre>
+<p>The best way to learn these commands is by using them.  Use the "i" command to
+insert some more lines of text.  Then use the hjkl keys to move around and
+insert a word somewhere.  Don't forget to press <Esc> to go back to Normal
+mode.  The |vimtutor| is also a nice way to learn by doing.</p>
+<p>For Japanese users, Hiroshi Iwatani suggested using this:</p>
+<pre><code>        Komsomolsk
+            ^
+            |
+   Huan Ho  &lt;--- ---&gt;  Los Angeles
+(Yellow river)      |
+            v
+          Java (the island, not the programming language)
+</code></pre>
+<p>==============================================================================</p>
+<h2 id="deleting-characters">Deleting characters</h2>
+<p>To delete a character, move the cursor over it and type "x".  (This is a
+throwback to the old days of the typewriter, when you deleted things by typing
+xxxx over them.)  Move the cursor to the beginning of the first line, for
+example, and type xxxxxxx (seven x's) to delete "A very ".  The result should
+look like this:</p>
+<pre><code>+---------------------------------------+
+|intelligent turtle         |
+|Found programming UNIX a hurdle    |
+|~                  |
+|~                  |
+|                   |
++---------------------------------------+
+</code></pre>
+<p>Now you can insert new text, for example by typing:</p>
+<pre><code>iA young &lt;Esc&gt;
+</code></pre>
+<p>This begins an insert (the i), inserts the words "A young", and then exits
+insert mode (the final <Esc>).  The result:</p>
+<pre><code>+---------------------------------------+
+|A young intelligent turtle     |
+|Found programming UNIX a hurdle    |
+|~                  |
+|~                  |
+|                   |
++---------------------------------------+
+</code></pre>
+<p>DELETING A LINE</p>
+<p>To delete a whole line use the "dd" command.  The following line will
+then move up to fill the gap:</p>
+<pre><code>+---------------------------------------+
+|Found programming UNIX a hurdle    |
+|~                  |
+|~                  |
+|~                  |
+|                   |
++---------------------------------------+
+</code></pre>
+<p>DELETING A LINE BREAK</p>
+<p>In Vim you can join two lines together, which means that the line break
+between them is deleted.  The "J" command does this.
+   Take these two lines:</p>
+<pre><code>A young intelligent 
+turtle
+</code></pre>
+<p>Move the cursor to the first line and press "J":</p>
+<pre><code>A young intelligent turtle
+</code></pre>
+<p>==============================================================================</p>
+<h2 id="undo-and-redo">Undo and Redo</h2>
+<p>Suppose you delete too much.  Well, you can type it in again, but an easier
+way exists.  The "u" command undoes the last edit.  Take a look at this in
+action: After using "dd" to delete the first line, "u" brings it back.
+   Another one: Move the cursor to the A in the first line:</p>
+<pre><code>A young intelligent turtle
+</code></pre>
+<p>Now type xxxxxxx to delete "A young".  The result is as follows:</p>
+<pre><code> intelligent turtle
+</code></pre>
+<p>Type "u" to undo the last delete.  That delete removed the g, so the undo
+restores the character.</p>
+<pre><code>g intelligent turtle
+</code></pre>
+<p>The next u command restores the next-to-last character deleted:</p>
+<pre><code>ng intelligent turtle
+</code></pre>
+<p>The next u command gives you the u, and so on:</p>
+<pre><code>ung intelligent turtle 
+oung intelligent turtle 
+young intelligent turtle 
+ young intelligent turtle 
+A young intelligent turtle
+
+Note:
+If you type "u" twice, and the result is that you get the same text
+back, you have Vim configured to work Vi compatible.  Look here to fix
+this: |not-compatible|.
+   This text assumes you work "The Vim Way".  You might prefer to use
+the good old Vi way, but you will have to watch out for small
+differences in the text then.
+</code></pre>
+<p>REDO</p>
+<p>If you undo too many times, you can press CTRL-R (redo) to reverse the
+preceding command.  In other words, it undoes the undo.  To see this in
+action, press CTRL-R twice.  The character A and the space after it disappear:</p>
+<pre><code>young intelligent turtle
+</code></pre>
+<p>There's a special version of the undo command, the "U" (undo line) command.
+The undo line command undoes all the changes made on the last line that was
+edited.  Typing this command twice cancels the preceding "U".</p>
+<pre><code>A very intelligent turtle 
+  xxxx              Delete very
+
+A intelligent turtle 
+          xxxxxx        Delete turtle
+
+A intelligent 
+                Restore line with "U"
+A very intelligent turtle 
+                Undo "U" with "u"
+A intelligent
+</code></pre>
+<p>The "U" command is a change by itself, which the "u" command undoes and CTRL-R
+redoes.  This might be a bit confusing.  Don't worry, with "u" and CTRL-R you
+can go to any of the situations you had.  More about that in section |32.2|.</p>
+<p>Reference: http://vimdoc.sourceforge.net/htmldoc/usr_02.html</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../components/underscore/underscore.js"></script>
+        <script src="../components/magiz-c-book/src/gspreadsheet.js"></script>
+        <script src="../components/magiz-c-paper/src/paper.js"></script>
+        <script src="../components/magiz-c-course/src/course.js"></script>
+        <script src="../components/magiz-c-benchmark/src/benchmark.js"></script>
+        <script src="../components/magiz-c-benchmark/src/bootstrap-popup.js"></script>
+        <script src="../components/magiz-c-book/src/book.js"></script>
+        <script src="../components/magiz-c-video/src/video.js"></script>
+        <script src="../components/jquery/dist/jquery.js"></script>
+        <script src="../components/magiz-doc/doc.js"></script>
+        <script src="../components/magiz-doc/footer.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

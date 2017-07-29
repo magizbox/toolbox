@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Brother Rain">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Virtual Box - Toolbox</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../components/magiz-c-book/src/book.css" rel="stylesheet">
+        <link href="../components/magiz-c-course/src/course.css" rel="stylesheet">
+        <link href="../components/magiz-c-video/src/video.css" rel="stylesheet">
+        <link href="../components/magiz-c-benchmark/src/benchmark.css" rel="stylesheet">
+        <link href="../components/magiz-c-paper/src/paper.css" rel="stylesheet">
+        <link href="../components/magiz-doc/style.css" rel="stylesheet">
+        <link href="../components/magiz-doc/highlight.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-68978617-1', 'magizbox.com');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">Toolbox</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li >
+                        <a href="../vim/">Vim</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">Virtual Box</a>
+                    </li>
+                    <li >
+                        <a href="../vmware/">VMWare</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../vim/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../vmware/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#virtual-box">Virtual Box</a></li>
+            <li><a href="#export-and-import-virtualbox-vm-images">Export and Import VirtualBox VM images?</a></li>
+            <li><a href="#install-guest-additions">Install Guest Additions</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="virtual-box">Virtual Box</h1>
+<h2 id="export-and-import-virtualbox-vm-images">Export and Import VirtualBox VM images?</h2>
+<h3 id="export">Export</h3>
+<p>Open VirtualBox and enter into the <code>File</code> option to choice <code>Export Appliance...</code></p>
+<p><img alt="" src="https://i.stack.imgur.com/WIJ98.png" /></p>
+<p>You will then get an assistance window to help you generating the image.</p>
+<ol>
+<li>Select the VM to export</li>
+<li>Enter the output file path and name</li>
+</ol>
+<p><img alt="" src="https://i.stack.imgur.com/lNrXD.png" /></p>
+<p>You can choice a format, which I always leave the default OVF 1.</p>
+<ol>
+<li>Finally you can write metadata like Version and Description</li>
+</ol>
+<p>Now you have an OVA file that you can carry to whatever machine to use it.</p>
+<h3 id="import">Import</h3>
+<p>Open VirtualBox and enter into the <code>File</code> option to choice <code>Import</code></p>
+<p>You will then get an assistance window to help you loading the image.</p>
+<ol>
+<li>Enter the path to the file that you have previously exported</li>
+</ol>
+<p><img alt="" src="https://i.stack.imgur.com/XHgG7.png" /></p>
+<ol>
+<li>Then you can modify the settings of the VM like RAM size, CPU, etc.</li>
+</ol>
+<p><img alt="" src="https://i.stack.imgur.com/kXQv6.png" /></p>
+<p>My recommendation on this is to enable the <em>Reinitialize the MAC address of all the network cards</em> option</p>
+<ol>
+<li>Press <code>Import</code> and done!</li>
+</ol>
+<p>Now you have cloned the VM from the host machine into another one</p>
+<p>Reference: <a href="https://askubuntu.com/questions/588426/how-to-export-and-import-virtualbox-vm-images">https://askubuntu.com/questions/588426/how-to-export-and-import-virtualbox-vm-images</a></p>
+<h2 id="install-guest-additions">Install Guest Additions</h2>
+<p>Guest Additions installs on the guest system and includes device drivers and system applications that optimize performance of the machine.  Launch the guest OS in VirtualBox and click on Devices and Install Guest Additions.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/1menu.png" /></p>
+<p>The AutoPlay window opens on the guest OS and click on the Run VBox Windows Additions executable.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/2autoplay.png" /></p>
+<p>Click yes when the UAC screen comes up.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/3UAC.png" /></p>
+<p>Now simply follow through the installation wizard.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/4installWizard.png" /></p>
+<p>During the installation wizard you can choose the Direct3D acceleration if you would like it.  Remember this is going to take up more of your Host OS’s resources and is still experimental possibly making the guest unstable.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/5install3dsupport.png" /></p>
+<p>When the installation starts you will need to allow the Sun display adapters to be installed.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/6confirm.png" /></p>
+<p>After everything has completed a reboot is required.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2009/07/7rebootrequired.png" /></p>
+<p>Reference: <a href="https://www.howtogeek.com/howto/2845/install-guest-additions-to-windows-and-linux-vms-in-virtualbox/">https://www.howtogeek.com/howto/2845/install-guest-additions-to-windows-and-linux-vms-in-virtualbox/</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../components/underscore/underscore.js"></script>
+        <script src="../components/magiz-c-book/src/gspreadsheet.js"></script>
+        <script src="../components/magiz-c-paper/src/paper.js"></script>
+        <script src="../components/magiz-c-course/src/course.js"></script>
+        <script src="../components/magiz-c-benchmark/src/benchmark.js"></script>
+        <script src="../components/magiz-c-benchmark/src/bootstrap-popup.js"></script>
+        <script src="../components/magiz-c-book/src/book.js"></script>
+        <script src="../components/magiz-c-video/src/video.js"></script>
+        <script src="../components/jquery/dist/jquery.js"></script>
+        <script src="../components/magiz-doc/doc.js"></script>
+        <script src="../components/magiz-doc/footer.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

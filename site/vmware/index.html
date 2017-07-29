@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Brother Rain">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>VMWare - Toolbox</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../components/magiz-c-book/src/book.css" rel="stylesheet">
+        <link href="../components/magiz-c-course/src/course.css" rel="stylesheet">
+        <link href="../components/magiz-c-video/src/video.css" rel="stylesheet">
+        <link href="../components/magiz-c-benchmark/src/benchmark.css" rel="stylesheet">
+        <link href="../components/magiz-c-paper/src/paper.css" rel="stylesheet">
+        <link href="../components/magiz-doc/style.css" rel="stylesheet">
+        <link href="../components/magiz-doc/highlight.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-68978617-1', 'magizbox.com');
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">Toolbox</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li >
+                        <a href="../vim/">Vim</a>
+                    </li>
+                    <li >
+                        <a href="../virtual_box/">Virtual Box</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">VMWare</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../virtual_box/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#vmware">VMWare</a></li>
+        <li class="main "><a href="#installing-vmware-workstation">Installing VMware Workstation</a></li>
+        <li class="main "><a href="#installing-an-operating-system">Installing an Operating System</a></li>
+        <li class="main "><a href="#navigating-vmware">Navigating VMware</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="vmware">VMWare</h1>
+<p>VMware Workstation is a program that allows you to run a virtual computer within your physical computer. The virtual computer runs as if it was its own machine. A virtual machine is great for trying out new operating systems such as Linux, visiting websites you don't trust, creating a computing environment specifically for children, testing the effects of computer viruses, and much more. You can even print and plug in USB drives. Read this guide to get the most out of VMware Workstation.</p>
+<h1 id="installing-vmware-workstation">Installing VMware Workstation</h1>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/5/50/Use-VMware-Workstation-Step-1-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-1-Version-2.jpg.webp" /></p>
+<p><strong>1. Make sure your computer meets the system requirements.</strong> Because you will be running an operating system from within your own operating system, VMware Workstation has fairly high system requirements. If you don’t meet these, you may not be able to run VMware effectively.
+You must have a 64-bit processor.
+VMware supports Windows and Linux operating systems.
+You must have enough memory to run your operating system, the virtual operating system, and any programs inside that operating system. 1 GB is the minimum, but 3 or more is recommended.
+You must have a 16-bit or 32-bit display adapter. 3D effects will most likely not work well inside the virtual operating system, so gaming is not always efficient.
+You need at least 1.5 GB of free space to install VMware Workstation, along with at least 1 GB per operating system that you install.</p>
+<p><img alt="" src="../images/Use-VMware-Workstation-Step-2-Version-2.jpg" /></p>
+<p><strong>2. Download the VMware software.</strong> You can download the VMware installer from the Download Center on the VMware website. Select the newest version and click the link for the installer. You will need to login with your VMware username.
+You will be asked to read and review the license agreement before you can download the file.
+You can only have one version of VMware Workstation installed at a time.</p>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/b/bd/Use-VMware-Workstation-Step-2-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-2-Version-2.jpg.webp" /></p>
+<p><strong>3. Install VMware Workstation.</strong> Once you have downloaded the file, right-click on the file and select “Run as administrator”.
+You will be asked to review the license again.
+Most users can use the Typical installation option.
+At the end of the installation, you will be prompted for your license key.
+Once the installation is finished, restart the computer.
+Part</p>
+<h1 id="installing-an-operating-system">Installing an Operating System</h1>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/3/35/Use-VMware-Workstation-Step-4-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-4-Version-2.jpg.webp" /></p>
+<p><strong>1. Open VMware.</strong> Installing a virtual operating system is much like installing it on a regular PC. You will need to have the installation disc or ISO image as well as any necessary licenses for the operating system that you want to install.</p>
+<ul>
+<li>You can install most distributions of Linux as well as any version of Windows.</li>
+</ul>
+<p><img alt="" src="http://pad1.whstatic.com/images/thumb/2/23/Use-VMware-Workstation-Step-5-Version-3.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-5-Version-3.jpg.webp" /></p>
+<p><strong>2. Click File.</strong> Select New Virtual Machine and then choose Typical. VMware will prompt you for the installation media. If it recognizes the operating system, it will enable Easy Installation:</p>
+<ul>
+<li><em>Physical disc</em> – Insert the installation disc for the operating system you want to install and then select the drive in VMware.</li>
+<li><em>ISO image</em> – Browse to the location of the ISO file on your computer.</li>
+<li><em>Install operating system later</em>. This will create a blank virtual disk. You will need to manually install the operating system later.</li>
+</ul>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/f/fd/Use-VMware-Workstation-Step-6-Version-3.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-6-Version-3.jpg.webp" /></p>
+<p><strong>3. Enter in the details for the operating system.</strong> For Windows and other licensed operating systems, you will need to enter your product key. You will also need to enter your preferred username and a password if you want one.
+* If you are not using Easy Install, you will need to browse the list for the operating system you are installing.</p>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/0/03/Use-VMware-Workstation-Step-7-Version-3.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-7-Version-3.jpg.webp" /></p>
+<p><strong>4. Name your virtual machine.</strong> The name will help you identify it on your physical computer. It will also help distinguish between multiple virtual computers running different operating systems.</p>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/4/4d/Use-VMware-Workstation-Step-8-Version-3.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-8-Version-3.jpg.webp" /></p>
+<p><strong>5. Set the disk size.</strong> You can allocate any amount of free space on your computer to the virtual machine to act as the installed operating system’s hard drive. Make sure to set enough to install any programs that you want to run in the virtual machine.</p>
+<p><img alt="" src="http://pad1.whstatic.com/images/thumb/f/f7/Use-VMware-Workstation-Step-9-Version-3.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-9-Version-3.jpg.webp" /></p>
+<p><strong>6. Customize your virtual machine’s virtual hardware.</strong> You can set the virtual machine to emulate specific hardware by clicking the “Customize Hardware” button. This can be useful if you are trying to run an older program that only supports certain hardware. Setting this is optional.</p>
+<p><img alt="" src="http://pad1.whstatic.com/images/thumb/8/8d/Use-VMware-Workstation-Step-10-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-10-Version-2.jpg.webp" /></p>
+<p><strong>7. Set the virtual machine to start.</strong> Check the box labeled “Power on this virtual machine after creation” if you want the virtual machine to start up as soon as you finish making it. If you don’t check this box, you can select your virtual machine from the list in VMware and click the Power On button.</p>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/0/0b/Use-VMware-Workstation-Step-11-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-11-Version-2.jpg.webp" /></p>
+<p><strong>8. Wait for your installation to complete.</strong> Once you’ve powered on the virtual machine for the first time, the operating system will begin to install automatically. If you provided all of the correct information during the setup of the virtual machine, then you should not have to do anything.
+If you didn’t enter your product key or create a username during the virtual machine setup, you will most likely be prompted during the installation of the operating system.</p>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/1/15/Use-VMware-Workstation-Step-12-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-12-Version-2.jpg.webp" /></p>
+<p><strong>9. Check that VMware Tools is installed.</strong> Once the operating system is installed, the program VMware Tools should be automatically installed. Check that it appears on the desktop or in the program files for the newly installed operating system.</p>
+<p>VMware tools are configuration options for your virtual machine, and keeps your virtual machine up to date with any software changes.</p>
+<h1 id="navigating-vmware">Navigating VMware</h1>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/8/88/Use-VMware-Workstation-Step-13-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-13-Version-2.jpg.webp" /></p>
+<p><strong>1. Start a virtual machine.</strong> To start a virtual machine, click the VM menu and select the virtual machine that you want to turn on. You can choose to start the virtual machine normally, or boot directly to the virtual BIOS.</p>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/5/51/Use-VMware-Workstation-Step-14-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-14-Version-2.jpg.webp" /></p>
+<p><strong>2. Stop a virtual machine.</strong> To stop a virtual machine, select it and then click the VM menu. Select the Power option.</p>
+<ul>
+<li><em>Power Off</em> – The virtual machine turns off as if the power was cut out.</li>
+<li><em>Shut Down Guest</em> – This sends a shutdown signal to the virtual machine which causes the virtual machine to shut down as if you had selected the shutdown option.</li>
+<li>You can also turn off the virtual machine by using the shutdown option in the virtual operating system.</li>
+</ul>
+<p><img alt="" src="http://pad1.whstatic.com/images/thumb/3/3f/Use-VMware-Workstation-Step-15-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-15-Version-2.jpg.webp" /></p>
+<p><strong>3. Move files between the virtual machine and your physical computer.</strong> Moving files between your computer and the virtual machine is as simple as dragging and dropping. Files can be moved in both directions between the computer and the virtual machine, and can also be dragged from one virtual machine to another.</p>
+<ul>
+<li>When you drag and drop, the original will stay in the original location and a copy will be created in the new location.</li>
+<li>You can also move files by copying and pasting.</li>
+<li>Virtual machines can connect to shared folders as well.</li>
+</ul>
+<p><img alt="" src="http://pad1.whstatic.com/images/thumb/7/71/Use-VMware-Workstation-Step-16-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-16-Version-2.jpg.webp" /></p>
+<p><strong>4. Add a printer to your virtual machine.</strong> You can add any printer to your virtual machine without having to install any extra drivers, as long as it is already installed on your host computer.</p>
+<ul>
+<li>Select the virtual machine that you want to add the printer to.</li>
+<li>Click the VM menu and select Settings.</li>
+<li>Click the Hardware tab, and then click Add. This will start the Add Hardware wizard.</li>
+<li>Select Printer and then click Finish. Your virtual printer will be enabled the next time you turn the virtual machine on.</li>
+</ul>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/e/e8/Use-VMware-Workstation-Step-17-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-17-Version-2.jpg.webp" /></p>
+<p><strong>5. Connect a USB drive to the virtual machine.</strong> Virtual machines can interact with a USB drive the same way that your normal operating system does. The USB drive cannot be accessed on both the host computer and the virtual machine at the same time.</p>
+<ul>
+<li>If the virtual machine is the active window, the USB drive will be automatically connected to the virtual machine when it is plugged in.</li>
+<li>If the virtual machine is not the active window or is not running, select the virtual machine and click the VM menu. Select Removable Devices and then click Connect. The USB drive will automatically connect to your virtual machine.</li>
+</ul>
+<p><img alt="" src="http://pad2.whstatic.com/images/thumb/8/8f/Use-VMware-Workstation-Step-18-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-18-Version-2.jpg.webp" /></p>
+<p><strong>6. Take a snapshot of a virtual machine.</strong> A snapshot is a saved state and will allow you to load the virtual machine to that precise moment as many times as you need.</p>
+<ul>
+<li>Select your virtual machine, click the VM menu, hover over Snapshot and select Take Snapshot.</li>
+<li>Give your Snapshot a name. You can also give it a description, though this is optional.</li>
+<li>Click OK to save the Snapshot.</li>
+<li>Load a saved Snapshot by clicking the VM menu and then selecting Snapshot. Choose the Snapshot you wish to load from the list and click Go To.</li>
+</ul>
+<p><img alt="" src="http://pad3.whstatic.com/images/thumb/a/a7/Use-VMware-Workstation-Step-19-Version-2.jpg/aid1394826-v4-728px-Use-VMware-Workstation-Step-19-Version-2.jpg.webp" /></p>
+<p><strong>7. Become familiar with keyboard shortcuts.</strong> A combination of the "Ctrl" and other keys are used to navigate virtual machines. For example, "Ctrl," "Alt" and "Enter" puts the current virtual machine in full screen mode or moves through multiple machines. "Ctrl," "Alt" and "Tab" will move between virtual machines when the mouse is being used by 1 machine.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../components/underscore/underscore.js"></script>
+        <script src="../components/magiz-c-book/src/gspreadsheet.js"></script>
+        <script src="../components/magiz-c-paper/src/paper.js"></script>
+        <script src="../components/magiz-c-course/src/course.js"></script>
+        <script src="../components/magiz-c-benchmark/src/benchmark.js"></script>
+        <script src="../components/magiz-c-benchmark/src/bootstrap-popup.js"></script>
+        <script src="../components/magiz-c-book/src/book.js"></script>
+        <script src="../components/magiz-c-video/src/video.js"></script>
+        <script src="../components/jquery/dist/jquery.js"></script>
+        <script src="../components/magiz-doc/doc.js"></script>
+        <script src="../components/magiz-doc/footer.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

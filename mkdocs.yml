@@ -1,0 +1,36 @@
+site_name: Toolbox
+site_author: "Brother Rain"
+google_analytics: ['UA-68978617-1', 'magizbox.com']
+
+pages:
+  - "Home": "index.md"
+  - "Vim": "vim.md"
+  - "Virtual Box": "virtual_box.md"
+  - "VMWare": "vmware.md"
+
+markdown_extensions:
+    - footnotes
+    - mdx_math
+
+extra_css:
+  - components/magiz-c-book/src/book.css
+  - components/magiz-c-course/src/course.css
+  - components/magiz-c-video/src/video.css
+  - components/magiz-c-benchmark/src/benchmark.css
+  - components/magiz-c-paper/src/paper.css
+  - components/magiz-doc/style.css
+  - components/magiz-doc/highlight.css
+
+extra_javascript:
+  - components/underscore/underscore.js
+  - components/magiz-c-book/src/gspreadsheet.js
+  - components/magiz-c-paper/src/paper.js
+  - components/magiz-c-course/src/course.js
+  - components/magiz-c-benchmark/src/benchmark.js
+  - components/magiz-c-benchmark/src/bootstrap-popup.js
+  - components/magiz-c-book/src/book.js
+  - components/magiz-c-video/src/video.js
+  - components/jquery/dist/jquery.js
+  - components/magiz-doc/doc.js
+  - components/magiz-doc/footer.js
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
